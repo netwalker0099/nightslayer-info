@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBC Anniversary - Tier 4 Raid Nerf Comparison</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(30, 30, 46, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        
+        h1 {
+            color: #ffd700;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            border-bottom: 3px solid #ffd700;
+            padding-bottom: 15px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #b0b0b0;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #4fc3f7;
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4fc3f7;
+        }
+        
+        h3 {
+            color: #81c784;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #ffb74d;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box {
+            background: rgba(255, 152, 0, 0.1);
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .info-box {
+            background: rgba(79, 195, 247, 0.1);
+            border-left: 4px solid #4fc3f7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .nerf-box {
+            background: rgba(129, 199, 132, 0.1);
+            border-left: 4px solid #81c784;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(50, 50, 70, 0.5);
+        }
+        
+        .comparison-table th {
+            background: rgba(79, 195, 247, 0.2);
+            color: #4fc3f7;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            border-bottom: 2px solid #4fc3f7;
+        }
+        
+        .comparison-table td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+        
+        .comparison-table tr:hover {
+            background: rgba(79, 195, 247, 0.05);
+        }
+        
+        .pre-nerf {
+            color: #e57373;
+            font-weight: bold;
+        }
+        
+        .post-nerf {
+            color: #81c784;
+            font-weight: bold;
+        }
+        
+        .boss-card {
+            background: rgba(50, 50, 70, 0.5);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ffb74d;
+        }
+        
+        .stat-reduction {
+            background: rgba(129, 199, 132, 0.2);
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 2px;
+            color: #81c784;
+        }
+        
+        .mechanic-change {
+            background: rgba(255, 152, 0, 0.2);
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 2px;
+            color: #ffb74d;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #ffd700;
+        }
+        
+        .raid-header {
+            background: linear-gradient(135deg, rgba(79, 195, 247, 0.2) 0%, rgba(129, 199, 132, 0.2) 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0 20px 0;
+            border: 2px solid #4fc3f7;
+        }
+        
+        .difficulty-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+        }
+        
+        .hard {
+            background: rgba(229, 115, 115, 0.3);
+            color: #e57373;
+        }
+        
+        .medium {
+            background: rgba(255, 183, 77, 0.3);
+            color: #ffb74d;
+        }
+        
+        .easy {
+            background: rgba(129, 199, 132, 0.3);
+            color: #81c784;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ TBC Anniversary Tier 4 Raid Changes ⚔️</h1>
+        <p class="subtitle">Pre-Nerf vs Post-Nerf Comparison Guide</p>
+        
+        <div class="warning-box">
+            <strong>📢 Important Notice:</strong> TBC Classic Anniversary will launch Tier 4 raids (Karazhan, Gruul's Lair, and Magtheridon's Lair) in their <span class="highlight">POST-NERF state</span>. This document details the differences between the original pre-nerf versions and what players will experience at launch.
+        </div>
+
+        <h2>📊 Overview of Nerf Changes</h2>
+        
+        <div class="info-box">
+            <h3>General Nerf Pattern (Applied to All T4 Raids)</h3>
+            <p>The nerfs to Tier 4 content were primarily implemented in <strong>Patch 3.0.2</strong> (the pre-WotLK patch) with some adjustments in earlier patches:</p>
+            <ul>
+                <li><span class="stat-reduction">~30% Health Reduction</span> - All raid bosses and many trash mobs</li>
+                <li><span class="stat-reduction">~20-30% Melee Damage Reduction</span> - Standard melee attacks only</li>
+                <li><strong>Spell/Ability Damage:</strong> Generally unchanged (some exceptions)</li>
+                <li><strong>Mechanics:</strong> Most remain the same, but some were bug-fixed or slightly adjusted</li>
+            </ul>
+        </div>
+
+        <h3>Why Post-Nerf for Anniversary?</h3>
+        <div class="nerf-box">
+            <p><strong>Blizzard's Reasoning:</strong></p>
+            <ul>
+                <li><strong>Accessibility:</strong> More players can experience Tier 4 content</li>
+                <li><strong>Faster Progression:</strong> Reduced time investment for casual guilds</li>
+                <li><strong>Historical Accuracy:</strong> Post-nerf was the state for most of TBC's lifespan</li>
+                <li><strong>Focus on Heroics:</strong> Pre-nerf Heroic Dungeons provide the early challenge</li>
+            </ul>
+            <p style="margin-top: 10px;"><em>Note: Blizzard is considering pre-nerf or alternative difficulty for Tier 5 (SSC/TK) based on community feedback.</em></p>
+        </div>
+
+        <h3>Impact on Gameplay</h3>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Pre-Nerf</th>
+                    <th>Post-Nerf</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Fight Duration</strong></td>
+                    <td class="pre-nerf">Longer encounters (5-10+ minutes on progression)</td>
+                    <td class="post-nerf">Shorter fights (30-40% faster kills)</td>
+                </tr>
+                <tr>
+                    <td><strong>Gear Requirements</strong></td>
+                    <td class="pre-nerf">Near-BiS dungeon gear + consumables required</td>
+                    <td class="post-nerf">Mix of dungeon blues/epics acceptable</td>
+                </tr>
+                <tr>
+                    <td><strong>Healer Mana</strong></td>
+                    <td class="pre-nerf">Constant mana pressure, frequent drinking</td>
+                    <td class="post-nerf">More manageable, fights end before OOM</td>
+                </tr>
+                <tr>
+                    <td><strong>DPS Checks</strong></td>
+                    <td class="pre-nerf">Tight, enrage timers challenging</td>
+                    <td class="post-nerf">Looser, most groups easily beat enrage</td>
+                </tr>
+                <tr>
+                    <td><strong>Tank Survivability</strong></td>
+                    <td class="pre-nerf">High spike damage, precise cooldown usage</td>
+                    <td class="post-nerf">More forgiving, fewer one-shot scenarios</td>
+                </tr>
+                <tr>
+                    <td><strong>Mechanic Frequency</strong></td>
+                    <td class="pre-nerf">More repetitions of mechanics per fight</td>
+                    <td class="post-nerf">Fewer mechanic cycles before boss dies</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- KARAZHAN -->
+        <div class="raid-header">
+            <h2 style="margin: 0; border: none; color: #4fc3f7;">🏰 Karazhan</h2>
+            <p style="margin-top: 10px; color: #b0b0b0;"><strong>Type:</strong> 10-man Raid | <strong>Bosses:</strong> 11 encounters + Chess Event</p>
+            <span class="difficulty-badge medium">Original Difficulty: Medium</span>
+            <span class="difficulty-badge easy">Post-Nerf Difficulty: Easy-Medium</span>
+        </div>
+
+        <h3>Boss-by-Boss Changes</h3>
+
+        <!-- Attumen -->
+        <div class="boss-card">
+            <h4>Attumen the Huntsman</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~574,000 HP (Attumen)<br>
+                            <strong>Midnight:</strong> ~287,000 HP<br>
+                            <strong>Combined Phase:</strong> ~861,000 HP total<br>
+                            <strong>Melee:</strong> 5,000-7,000 on plate tanks<br>
+                            <strong>Charge:</strong> More threatening to clothies
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~401,800 HP</span> (30% reduction)<br>
+                            <strong>Midnight:</strong> <span class="stat-reduction">~200,900 HP</span><br>
+                            <strong>Combined Phase:</strong> <span class="stat-reduction">~602,700 HP</span><br>
+                            <strong>Melee:</strong> <span class="stat-reduction">3,500-5,000</span> (reduced)<br>
+                            <strong>Charge:</strong> Slightly reduced damage
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Mechanics:</strong> Largely unchanged - Charge, Knockdown, Intangible Presence debuff all function the same<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge easy">Moderate → Easy</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Moroes -->
+        <div class="boss-card">
+            <h4>Moroes</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~574,000 HP<br>
+                            <strong>Guest Health:</strong> ~143,500 HP each<br>
+                            <strong>Garrote:</strong> Heavy DoT damage<br>
+                            <strong>Vanish + Gouge:</strong> High threat reset danger<br>
+                            <strong>Melee:</strong> Hits very hard during Vanish
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~401,800 HP</span><br>
+                            <strong>Guest Health:</strong> <span class="stat-reduction">~100,450 HP each</span><br>
+                            <strong>Garrote:</strong> Damage unchanged<br>
+                            <strong>Vanish:</strong> Slightly more manageable<br>
+                            <strong>Melee:</strong> <span class="stat-reduction">Reduced by ~25%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Key Change:</strong> Garrote still dangerous but faster kill time means fewer stacks<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Hard → Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Maiden -->
+        <div class="boss-card">
+            <h4>Maiden of Virtue</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~861,000 HP<br>
+                            <strong>Holy Fire:</strong> 2,800-3,200 damage<br>
+                            <strong>Holy Ground:</strong> 600-800 damage/sec<br>
+                            <strong>Repentance:</strong> 10-second CC (unchanged)<br>
+                            <strong>Fight Length:</strong> Mana intensive for healers
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~602,700 HP</span><br>
+                            <strong>Holy Fire:</strong> Same (spell damage unchanged)<br>
+                            <strong>Holy Ground:</strong> Same<br>
+                            <strong>Repentance:</strong> Same<br>
+                            <strong>Fight Length:</strong> <span class="stat-reduction">Shorter = less mana pressure</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Impact:</strong> Shorter fight means healers don't run OOM as often<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge medium">Medium → Easy-Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Opera Event -->
+        <div class="boss-card">
+            <h4>Opera Event (Wizard of Oz / Big Bad Wolf / Romulo & Julianne)</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Boss Health:</strong> Varies by event<br>
+                            <strong>Oz:</strong> ~287,000 HP (Crone)<br>
+                            <strong>Wolf:</strong> ~574,000 HP<br>
+                            <strong>R&J:</strong> ~287,000 HP each<br>
+                            <strong>Red Riding Hood:</strong> Terrifying damage
+                        </td>
+                        <td>
+                            <strong>Boss Health:</strong> <span class="stat-reduction">All ~30% reduction</span><br>
+                            <strong>Oz:</strong> <span class="stat-reduction">~200,900 HP</span><br>
+                            <strong>Wolf:</strong> <span class="stat-reduction">~401,800 HP</span><br>
+                            <strong>R&J:</strong> <span class="stat-reduction">~200,900 HP each</span><br>
+                            <strong>Red Riding Hood:</strong> <span class="stat-reduction">Still scary but shorter</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Mechanics:</strong> All mechanics function the same<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge medium">Medium → Easy-Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Curator -->
+        <div class="boss-card">
+            <h4>The Curator</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~1,722,000 HP<br>
+                            <strong>Evocation:</strong> 10 seconds every 20% mana<br>
+                            <strong>Flare Count:</strong> More spawns over longer fight<br>
+                            <strong>Arcane Bolts:</strong> 4,000+ damage<br>
+                            <strong>Enrage:</strong> 10 minutes
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~1,205,400 HP</span><br>
+                            <strong>Evocation:</strong> Same mechanic<br>
+                            <strong>Flare Count:</strong> <span class="stat-reduction">Fewer due to faster kill</span><br>
+                            <strong>Arcane Bolts:</strong> Same (spell damage)<br>
+                            <strong>Enrage:</strong> Rarely reached now
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Key Change:</strong> DPS check significantly easier, fewer Flares to handle<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Hard → Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Shade of Aran -->
+        <div class="boss-card">
+            <h4>Shade of Aran</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~1,148,000 HP<br>
+                            <strong>Arcane Missiles:</strong> ~12,000 total damage<br>
+                            <strong>Fireball:</strong> ~4,000 damage<br>
+                            <strong>Blizzard:</strong> Heavy raid damage<br>
+                            <strong>Flame Wreath:</strong> Instant death if moved<br>
+                            <strong>Dragon's Breath:</strong> High cone damage
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~803,600 HP</span><br>
+                            <strong>Arcane Missiles:</strong> Same<br>
+                            <strong>Fireball:</strong> Same<br>
+                            <strong>Blizzard:</strong> Same<br>
+                            <strong>Flame Wreath:</strong> Same mechanic<br>
+                            <strong>Dragon's Breath:</strong> <span class="mechanic-change">BUG FIX: No longer over-tuned</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Major Fix:</strong> Dragon's Breath was dealing more damage than intended - now corrected<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Hard → Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Illhoof -->
+        <div class="boss-card">
+            <h4>Terestian Illhoof</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~574,000 HP<br>
+                            <strong>Imp Health:</strong> ~14,350 HP each<br>
+                            <strong>Sacrifice:</strong> Chains + DoT damage<br>
+                            <strong>Demon Chains:</strong> 1,500 damage/sec<br>
+                            <strong>Kilrek:</strong> ~86,100 HP
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~401,800 HP</span><br>
+                            <strong>Imp Health:</strong> <span class="stat-reduction">~10,045 HP each</span><br>
+                            <strong>Sacrifice:</strong> Same mechanic<br>
+                            <strong>Demon Chains:</strong> Same (spell damage)<br>
+                            <strong>Kilrek:</strong> <span class="stat-reduction">~60,270 HP</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Mechanics:</strong> All unchanged - still need to kill imps and save sacrificed targets<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge medium">Medium → Easy-Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Netherspite -->
+        <div class="boss-card">
+            <h4>Netherspite</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~1,722,000 HP<br>
+                            <strong>Portal Phase:</strong> 60 seconds<br>
+                            <strong>Banish Phase:</strong> 30 seconds<br>
+                            <strong>Beam Damage:</strong> Stacks quickly<br>
+                            <strong>Void Zones:</strong> Heavy damage
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~1,205,400 HP</span><br>
+                            <strong>Portal Phase:</strong> Same timing<br>
+                            <strong>Banish Phase:</strong> Same timing<br>
+                            <strong>Beam Damage:</strong> Same (spell damage)<br>
+                            <strong>Void Zones:</strong> Same
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Key Change:</strong> Fewer portal phases needed = less beam rotation stress<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Hard → Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Chess -->
+        <div class="boss-card">
+            <h4>Chess Event</h4>
+            <div class="info-box">
+                <strong>No Changes:</strong> Chess Event mechanics remain identical between pre-nerf and post-nerf. This is a strategic puzzle encounter rather than a traditional boss fight.
+            </div>
+        </div>
+
+        <!-- Prince -->
+        <div class="boss-card">
+            <h4>Prince Malchezaar</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~2,009,000 HP<br>
+                            <strong>Phase 1:</strong> 100-60%<br>
+                            <strong>Phase 2:</strong> 60-30% (axes spawn)<br>
+                            <strong>Phase 3:</strong> 30-0% (infernals spawn)<br>
+                            <strong>Shadow Nova:</strong> ~6,000 damage<br>
+                            <strong>Enfeeble:</strong> HP reduction mechanic<br>
+                            <strong>Melee:</strong> Very high tank damage
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~1,406,300 HP</span><br>
+                            <strong>Phases:</strong> Same thresholds<br>
+                            <strong>Axes:</strong> <span class="stat-reduction">Fewer overall</span><br>
+                            <strong>Infernals:</strong> <span class="stat-reduction">Less spawn time</span><br>
+                            <strong>Shadow Nova:</strong> Same (spell)<br>
+                            <strong>Enfeeble:</strong> Same mechanic<br>
+                            <strong>Melee:</strong> <span class="stat-reduction">Reduced ~25%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Major Impact:</strong> Much less room clutter from axes/infernals due to faster kill<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Hard → Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Nightbane -->
+        <div class="boss-card">
+            <h4>Nightbane (Optional Boss)</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~1,722,000 HP<br>
+                            <strong>Ground Phase:</strong> Heavy melee damage<br>
+                            <strong>Air Phase:</strong> 45 seconds<br>
+                            <strong>Skeletons:</strong> ~57,400 HP each (5 spawn)<br>
+                            <strong>Charred Earth:</strong> Large fire zones<br>
+                            <strong>Distracting Ash:</strong> -75% healing debuff<br>
+                            <strong>Smoking Blast:</strong> ~4,000 damage
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~1,205,400 HP</span><br>
+                            <strong>Ground Phase:</strong> <span class="stat-reduction">Reduced melee</span><br>
+                            <strong>Air Phase:</strong> Same timing<br>
+                            <strong>Skeletons:</strong> <span class="stat-reduction">~40,180 HP each</span><br>
+                            <strong>Charred Earth:</strong> Same<br>
+                            <strong>Distracting Ash:</strong> Same mechanic<br>
+                            <strong>Smoking Blast:</strong> Same (spell)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Significant Change:</strong> This was one of the most impacted bosses - much more manageable now<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Very Hard → Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- GRUUL'S LAIR -->
+        <div class="raid-header">
+            <h2 style="margin: 0; border: none; color: #4fc3f7;">⚔️ Gruul's Lair</h2>
+            <p style="margin-top: 10px; color: #b0b0b0;"><strong>Type:</strong> 25-man Raid | <strong>Bosses:</strong> 2 encounters</p>
+            <span class="difficulty-badge medium">Original Difficulty: Medium-Hard</span>
+            <span class="difficulty-badge easy">Post-Nerf Difficulty: Easy-Medium</span>
+        </div>
+
+        <h3>Boss Changes</h3>
+
+        <!-- High King Maulgar -->
+        <div class="boss-card">
+            <h4>High King Maulgar</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Maulgar Health:</strong> ~1,722,000 HP<br>
+                            <strong>Adds:</strong> 4 council members<br>
+                            <strong>Krosh (Warlock):</strong> ~689,000 HP<br>
+                            <strong>Blindeye (Mage):</strong> ~574,000 HP<br>
+                            <strong>Olm (Priest):</strong> ~689,000 HP<br>
+                            <strong>Kiggler (Shaman):</strong> ~574,000 HP<br>
+                            <strong>Whirlwind:</strong> 6,000+ raid damage/tick<br>
+                            <strong>Coordination:</strong> Requires perfect add control
+                        </td>
+                        <td>
+                            <strong>Maulgar Health:</strong> <span class="stat-reduction">~1,205,400 HP</span><br>
+                            <strong>Adds:</strong> Same count<br>
+                            <strong>Krosh:</strong> <span class="stat-reduction">~482,300 HP</span><br>
+                            <strong>Blindeye:</strong> <span class="stat-reduction">~401,800 HP</span><br>
+                            <strong>Olm:</strong> <span class="stat-reduction">~482,300 HP</span><br>
+                            <strong>Kiggler:</strong> <span class="stat-reduction">~401,800 HP</span><br>
+                            <strong>Whirlwind:</strong> Same (spell damage)<br>
+                            <strong>Coordination:</strong> More forgiving
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Loot Change:</strong> <span class="highlight">Now drops 2 Tier tokens instead of 1!</span><br>
+                            <strong>Mechanics:</strong> All add abilities unchanged, but faster kills<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Hard → Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Gruul -->
+        <div class="boss-card">
+            <h4>Gruul the Dragonkiller</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~4,018,000 HP<br>
+                            <strong>Ground Slam:</strong> Every 20-30 seconds<br>
+                            <strong>Shatter:</strong> 15 seconds after Slam<br>
+                            <strong>Grow:</strong> Stacks every 30 seconds<br>
+                            <strong>Cave In:</strong> Falling rocks (3,500 damage)<br>
+                            <strong>Melee:</strong> Hits extremely hard<br>
+                            <strong>Enrage:</strong> ~8 Growth stacks = very difficult
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~2,812,600 HP</span><br>
+                            <strong>Ground Slam:</strong> Same mechanic<br>
+                            <strong>Shatter:</strong> Same mechanic<br>
+                            <strong>Grow:</strong> <span class="stat-reduction">Fewer stacks before kill</span><br>
+                            <strong>Cave In:</strong> Same damage<br>
+                            <strong>Melee:</strong> <span class="stat-reduction">Reduced ~25-30%</span><br>
+                            <strong>Enrage:</strong> <span class="stat-reduction">Rarely reaches 6+ stacks</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Loot Change:</strong> <span class="highlight">Now drops 2 Tier tokens instead of 1!</span><br>
+                            <strong>Major Impact:</strong> Much more forgiving at high Growth stacks - don't reach truly scary phases<br>
+                            <strong>Historical Note:</strong> Gruul had a hotfix preventing immunities (Ice Block, Divine Shield) from stopping Shatter damage<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Very Hard → Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- MAGTHERIDON'S LAIR -->
+        <div class="raid-header">
+            <h2 style="margin: 0; border: none; color: #4fc3f7;">🔥 Magtheridon's Lair</h2>
+            <p style="margin-top: 10px; color: #b0b0b0;"><strong>Type:</strong> 25-man Raid | <strong>Bosses:</strong> 1 encounter (+ trash gauntlet)</p>
+            <span class="difficulty-badge hard">Original Difficulty: Hard</span>
+            <span class="difficulty-badge medium">Post-Nerf Difficulty: Medium</span>
+        </div>
+
+        <h3>Encounter Changes</h3>
+
+        <!-- Trash -->
+        <div class="boss-card">
+            <h4>Trash Gauntlet (Hellfire Channelers)</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Channeler Health:</strong> ~172,200 HP each<br>
+                            <strong>Count:</strong> 5 total around room<br>
+                            <strong>Mind Control:</strong> Unpredictable, devastating<br>
+                            <strong>Shadow Bolt Volley:</strong> ~4,000 raid damage<br>
+                            <strong>Dark Mending:</strong> 50% heal if not interrupted<br>
+                            <strong>Burning Abyssal:</strong> Spawns during fight<br>
+                            <strong>Difficulty:</strong> Notoriously hard trash
+                        </td>
+                        <td>
+                            <strong>Channeler Health:</strong> <span class="stat-reduction">~120,540 HP each</span><br>
+                            <strong>Count:</strong> Same<br>
+                            <strong>Mind Control:</strong> Same mechanic<br>
+                            <strong>Shadow Bolt Volley:</strong> Same<br>
+                            <strong>Dark Mending:</strong> Same<br>
+                            <strong>Burning Abyssal:</strong> <span class="stat-reduction">Reduced health</span><br>
+                            <strong>Difficulty:</strong> <span class="stat-reduction">More manageable</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Note:</strong> This trash was legendarily difficult pre-nerf - many wipes before reaching boss<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Very Hard → Medium</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Magtheridon Boss -->
+        <div class="boss-card">
+            <h4>Magtheridon</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Pre-Nerf</th>
+                        <th style="width: 50%;">Post-Nerf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Health:</strong> ~5,452,000 HP<br>
+                            <strong>Phase 1:</strong> Channeled by Warders<br>
+                            <strong>Phase 2:</strong> Free, enraged<br>
+                            <strong>Blast Nova:</strong> 30-second cast<br>
+                            <strong>Cube Clicking:</strong> 5 players, precise timing<br>
+                            <strong>Cleave:</strong> ~15,000 damage<br>
+                            <strong>Conflagration:</strong> DoT + AoE damage<br>
+                            <strong>Debris:</strong> Falling rocks<br>
+                            <strong>Collapse:</strong> Room fills with fire
+                        </td>
+                        <td>
+                            <strong>Health:</strong> <span class="stat-reduction">~3,816,400 HP</span><br>
+                            <strong>Phases:</strong> Same mechanics<br>
+                            <strong>Blast Nova:</strong> <span class="mechanic-change">BUG FIXED</span><br>
+                            <strong>Cube Clicking:</strong> Same timing<br>
+                            <strong>Cleave:</strong> <span class="stat-reduction">~10,500 damage</span><br>
+                            <strong>Conflagration:</strong> Same<br>
+                            <strong>Debris:</strong> Same<br>
+                            <strong>Collapse:</strong> Same pressure
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Loot Change:</strong> <span class="highlight">Now drops 2 Tier tokens instead of 1!</span><br>
+                            <strong>Critical Bug Fix:</strong> Blast Nova warning/casting was inconsistent pre-nerf, causing unpredictable raid wipes. Now works correctly every time.<br>
+                            <strong>Cube Mechanic:</strong> Still requires precise 5-player coordination<br>
+                            <strong>Difficulty Change:</strong> <span class="difficulty-badge hard">Very Hard → Medium-Hard</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- COMPARISON SUMMARY -->
+        <h2>📊 Overall Tier 4 Comparison</h2>
+
+        <div class="nerf-box">
+            <h3>What Changed</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Boss Health</strong></td>
+                        <td><span class="stat-reduction">Reduced by ~30% across all bosses</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Melee Damage</strong></td>
+                        <td><span class="stat-reduction">Reduced by ~20-30% on physical hits</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spell Damage</strong></td>
+                        <td>Generally unchanged (some bug fixes)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mechanics</strong></td>
+                        <td>Mostly unchanged - same positioning, interrupts, etc.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fight Duration</strong></td>
+                        <td><span class="stat-reduction">30-40% shorter on average</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tier Token Drops</strong></td>
+                        <td><span class="highlight">Gruul/Maulgar/Mag now drop 2 tokens (was 1)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>What Stayed the Same</h3>
+        <div class="info-box">
+            <ul>
+                <li><strong>All core mechanics</strong> - Flame Wreath, Shatter, Blast Nova cubes, etc.</li>
+                <li><strong>Spell damage values</strong> - Arcane Missiles, Shadow Nova, Blizzard, etc.</li>
+                <li><strong>Positioning requirements</strong> - Still need proper spreading/stacking</li>
+                <li><strong>Interrupt priorities</strong> - Same spells need interrupting</li>
+                <li><strong>CC requirements</strong> - Moroes guests, Maulgar adds</li>
+                <li><strong>Phase transitions</strong> - Same HP thresholds trigger phases</li>
+                <li><strong>Loot tables</strong> - Same items drop (except token count)</li>
+            </ul>
+        </div>
+
+        <h2>🎯 Impact on Different Player Types</h2>
+
+        <div class="boss-card">
+            <h4>For Progression Raiders</h4>
+            <ul>
+                <li><span class="stat-reduction">✓ Faster clear times</span> - More time for other content</li>
+                <li><span class="stat-reduction">✓ Gear up quickly</span> - Double tier tokens help</li>
+                <li><span class="stat-reduction">✓ Less consumable cost</span> - Shorter fights = less pot usage</li>
+                <li><span class="mechanic-change">○ Less challenging</span> - May feel too easy for hardcore players</li>
+                <li><span class="mechanic-change">○ Pre-nerf Heroics</span> - Challenge moved to 5-mans instead</li>
+            </ul>
+        </div>
+
+        <div class="boss-card">
+            <h4>For Casual/Alt Raids</h4>
+            <ul>
+                <li><span class="stat-reduction">✓ Much more accessible</span> - Can clear with dungeon blues</li>
+                <li><span class="stat-reduction">✓ Easier to pug</span> - Less coordination required</li>
+                <li><span class="stat-reduction">✓ Attunements easier</span> - Nightbane/Gruul/Mag more killable</li>
+                <li><span class="stat-reduction">✓ Less stress</span> - More forgiving of mistakes</li>
+                <li><span class="stat-reduction">✓ Better loot distribution</span> - Double tier tokens speed up gearing</li>
+            </ul>
+        </div>
+
+        <div class="boss-card">
+            <h4>For New Players</h4>
+            <ul>
+                <li><span class="stat-reduction">✓ Better learning curve</span> - Less punishing for first-timers</li>
+                <li><span class="stat-reduction">✓ See mechanics without wiping</span> - Faster kills = survive to learn</li>
+                <li><span class="stat-reduction">✓ Join raids sooner</span> - Lower gear requirements</li>
+                <li><span class="stat-reduction">✓ More forgiving</span> - Can recover from mistakes</li>
+            </ul>
+        </div>
+
+        <h2>💡 Strategy Implications</h2>
+
+        <div class="warning-box">
+            <h3>How Post-Nerf Changes Your Approach</h3>
+            <ul>
+                <li><strong>DPS Specs More Viable:</strong> Looser DPS checks mean less optimal specs can raid</li>
+                <li><strong>Healing Comp More Flexible:</strong> Don't need 3+ healers in Kara with shorter fights</li>
+                <li><strong>Consumable Strategy:</strong> Can skip some expensive consumables on farm</li>
+                <li><strong>Gear Requirements:</strong> Mix of dungeon blues/epics sufficient for clears</li>
+                <li><strong>Week 1 Strategies:</strong> Even fresh 70s can participate with coordination</li>
+                <li><strong>Heroics > Kara:</strong> Pre-nerf Heroics may be harder than Karazhan now</li>
+            </ul>
+        </div>
+
+        <h2>🔮 Looking Ahead: Tier 5 Discussion</h2>
+
+        <div class="info-box">
+            <h3>Blizzard's Position on SSC/TK</h3>
+            <p>While Tier 4 is confirmed post-nerf, <strong>Tier 5 difficulty is still under discussion</strong>:</p>
+            <ul>
+                <li><strong>Community Feedback:</strong> Many players want more challenge</li>
+                <li><strong>Pre-nerf Concerns:</strong> Lady Vashj's mind control was notoriously overtuned</li>
+                <li><strong>Kael'thas Issues:</strong> Pre-nerf version was essentially unkillable (bug-related)</li>
+                <li><strong>Potential Solutions:</strong>
+                    <ul>
+                        <li>Pre-nerf with bug fixes</li>
+                        <li>Custom "Anniversary tuning"</li>
+                        <li>Post-nerf like T4</li>
+                        <li>Optional hard mode toggle</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Blizzard Quote:</strong> <em>"We want to continue the discussion and evaluate what that may mean for Tier 5 — specifically Serpentshrine Cavern and Tempest Keep."</em></p>
+        </div>
+
+        <!-- FOOTER -->
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #4fc3f7; text-align: center; color: #b0b0b0;">
+            <p><strong>TBC Classic Anniversary Edition - Tier 4 Raid Changes</strong></p>
+            <p>Launch Date: February 2026 (Expected)</p>
+            <p style="margin-top: 20px; font-size: 0.9em;">
+                All data compiled from PTR testing, official patch notes, and historical TBC information.<br>
+                Values are approximate and subject to minor variation based on server implementation.<br>
+                For the latest updates, check the official WoW Classic PTR forums.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

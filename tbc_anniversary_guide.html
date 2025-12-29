@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBC Classic Anniversary Edition - Complete Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(30, 30, 46, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        
+        h1 {
+            color: #ffd700;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            border-bottom: 3px solid #ffd700;
+            padding-bottom: 15px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #b0b0b0;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #4fc3f7;
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4fc3f7;
+        }
+        
+        h3 {
+            color: #81c784;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #ffb74d;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .info-box {
+            background: rgba(79, 195, 247, 0.1);
+            border-left: 4px solid #4fc3f7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: rgba(255, 152, 0, 0.1);
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .success-box {
+            background: rgba(129, 199, 132, 0.1);
+            border-left: 4px solid #81c784;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(50, 50, 70, 0.5);
+        }
+        
+        th {
+            background: rgba(79, 195, 247, 0.2);
+            color: #4fc3f7;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            border-bottom: 2px solid #4fc3f7;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        tr:hover {
+            background: rgba(79, 195, 247, 0.05);
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .class-card {
+            background: rgba(50, 50, 70, 0.5);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #81c784;
+        }
+        
+        .profession-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .profession-card {
+            background: rgba(50, 50, 70, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 3px solid #ffb74d;
+        }
+        
+        .stat-bonus {
+            color: #81c784;
+            font-weight: bold;
+        }
+        
+        .negative {
+            color: #e57373;
+        }
+        
+        .highlight {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #ffd700;
+        }
+        
+        .date-badge {
+            display: inline-block;
+            background: rgba(255, 152, 0, 0.3);
+            color: #ffb74d;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ The Burning Crusade Classic Anniversary Edition ⚔️</h1>
+        <p class="subtitle">Complete Guide to Changes, Classes, and Professions</p>
+        
+        <div class="info-box">
+            <strong>📅 Key Dates:</strong><br>
+            <span class="date-badge">Pre-Patch: January 13, 2026</span>
+            <span class="date-badge">Expected Launch: Early-Mid February 2026</span><br>
+            <span class="date-badge">Transfer Window: November 25, 2025 - January 13, 2026</span>
+        </div>
+
+        <!-- TABLE OF CONTENTS -->
+        <h2>📋 Table of Contents</h2>
+        <ol>
+            <li><a href="#major-changes" style="color: #4fc3f7;">Major Gameplay Changes</a></li>
+            <li><a href="#drums" style="color: #4fc3f7;">Drums & Haste Mechanics</a></li>
+            <li><a href="#professions" style="color: #4fc3f7;">Profession System Overview</a></li>
+            <li><a href="#class-professions" style="color: #4fc3f7;">Best Professions by Class</a></li>
+            <li><a href="#pvp-changes" style="color: #4fc3f7;">Arena & PvP Changes</a></li>
+            <li><a href="#quality-of-life" style="color: #4fc3f7;">Quality of Life Features</a></li>
+        </ol>
+
+        <!-- MAJOR GAMEPLAY CHANGES -->
+        <h2 id="major-changes">🎮 Major Gameplay Changes</h2>
+
+        <h3>Bloodlust/Heroism (Massive Change)</h3>
+        <div class="success-box">
+            <strong>This is the biggest meta shift from original TBC!</strong>
+            <ul>
+                <li><span class="highlight">Now RAID-WIDE</span> instead of party-only (affects all 25 players)</li>
+                <li>Applies 10-minute Sated/Exhaustion debuff to entire raid</li>
+                <li><span class="stat-bonus">Debuff resets on boss kill or wipe</span> - No more waiting between pulls!</li>
+                <li>One Shaman can now buff the entire raid</li>
+            </ul>
+        </div>
+
+        <h3>Attunements (Account-Wide)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Content Type</th>
+                    <th>First Character</th>
+                    <th>Alt Characters</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Heroic Dungeons</strong></td>
+                    <td>Must reach Revered reputation</td>
+                    <td>Purchase BoA key bag, only need Friendly</td>
+                </tr>
+                <tr>
+                    <td><strong>Raids</strong></td>
+                    <td>Complete full attunement</td>
+                    <td>Automatically unlocked across account</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Raid & Dungeon Difficulty</h3>
+        <div class="info-box">
+            <ul>
+                <li><strong>Tier 4 Raids:</strong> Karazhan, Gruul, Magtheridon - Released in <span class="stat-bonus">post-nerf state</span></li>
+                <li><strong>Heroic Dungeons:</strong> Using <span class="highlight">pre-nerf tuning</span> for more challenge</li>
+                <li><strong>Tier 5+:</strong> Difficulty still being evaluated based on community feedback</li>
+            </ul>
+        </div>
+
+        <!-- DRUMS MECHANICS -->
+        <h2 id="drums">🥁 Drums & Haste Mechanics</h2>
+
+        <div class="class-card">
+            <h3>How Drums Work in Anniversary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Effect</strong></td>
+                        <td>+80 Haste Rating to party members for 30 seconds</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Range</strong></td>
+                        <td>Party-wide only (5 players, NOT raid-wide)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cooldown</strong></td>
+                        <td>2 minutes (via Tinnitus debuff)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stacks with Bloodlust?</strong></td>
+                        <td><span class="stat-bonus">YES</span> - Separate debuff systems</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Can be chained?</strong></td>
+                        <td><span class="negative">NO</span> - Tinnitus prevents stacking</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LW Required per Raid</strong></td>
+                        <td>Only <span class="stat-bonus">1 per party</span> (5 total for 25-man)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="warning-box">
+            <strong>⚠️ Important:</strong> The Tinnitus debuff means Leatherworking is <span class="highlight">NO LONGER MANDATORY</span> for all raiders. You only need one Leatherworker per 5-man party instead of the entire raid stacking it.
+        </div>
+
+        <!-- PROFESSION SYSTEM -->
+        <h2 id="professions">⚒️ Profession System Overview</h2>
+
+        <h3>Profession Bonus Comparison</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Profession</th>
+                    <th>Primary Bonus</th>
+                    <th>Stat Equivalent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Jewelcrafting</strong></td>
+                    <td>3x JC-only gems (superior stats)</td>
+                    <td><span class="stat-bonus">+60 SP / +108 AP / +81 Stam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Blacksmithing</strong></td>
+                    <td>Extra socket on Gloves & Bracers</td>
+                    <td><span class="stat-bonus">+46 SP / +80 AP</span> (with Epic gems)</td>
+                </tr>
+                <tr>
+                    <td><strong>Enchanting</strong></td>
+                    <td>Ring enchants (both rings)</td>
+                    <td><span class="stat-bonus">+24 SP / +16 Stats total</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Leatherworking</strong></td>
+                    <td>Drums of Battle (party haste buff)</td>
+                    <td>+80 Haste to party (30 sec, 2 min CD)</td>
+                </tr>
+                <tr>
+                    <td><strong>Alchemy</strong></td>
+                    <td>Double flask/elixir duration</td>
+                    <td>Massive gold savings over time</td>
+                </tr>
+                <tr>
+                    <td><strong>Engineering</strong></td>
+                    <td>Goggles, bombs, gadgets</td>
+                    <td>Utility focused, not pure stats</td>
+                </tr>
+                <tr>
+                    <td><strong>Tailoring</strong></td>
+                    <td>Specialization sets (BoP gear)</td>
+                    <td>Excellent early-game pieces</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <strong>💡 Key Insights:</strong>
+            <ul>
+                <li><strong>Jewelcrafting</strong> dominates early phases (Phase 1-3)</li>
+                <li><strong>Blacksmithing</strong> scales best late-game with Epic gems</li>
+                <li><strong>Gathering professions</strong> have NO combat bonuses (gold-making only)</li>
+                <li>You can drop and re-learn professions to optimize for different phases</li>
+            </ul>
+        </div>
+
+        <!-- CLASS-SPECIFIC PROFESSIONS -->
+        <h2 id="class-professions">🎯 Best Professions by Class/Role</h2>
+
+        <div class="profession-grid">
+            <!-- MELEE DPS -->
+            <div class="class-card">
+                <h3>⚔️ Melee DPS</h3>
+                <p><em>Warriors, Rogues, Enhancement Shaman, Ret Paladin, Feral DPS</em></p>
+                <h4>Primary Recommendations:</h4>
+                <ol>
+                    <li><strong>Jewelcrafting</strong> - <span class="stat-bonus">+108 Attack Power</span></li>
+                    <li><strong>Blacksmithing</strong> - 2 extra sockets (scales better late)</li>
+                </ol>
+                <h4>Secondary Options:</h4>
+                <ul>
+                    <li><strong>Leatherworking</strong> - If your party needs drums</li>
+                    <li><strong>Engineering</strong> - Bombs, utility</li>
+                    <li><strong>Enchanting</strong> - +16 stats total</li>
+                </ul>
+                <div class="warning-box">
+                    <strong>Best Combo:</strong> Jewelcrafting + Blacksmithing for maximum scaling
+                </div>
+            </div>
+
+            <!-- RANGED DPS -->
+            <div class="class-card">
+                <h3>🏹 Ranged Physical DPS</h3>
+                <p><em>Hunters</em></p>
+                <h4>Primary Recommendations:</h4>
+                <ol>
+                    <li><strong>Jewelcrafting</strong> - <span class="stat-bonus">+108 Attack Power</span></li>
+                    <li><strong>Leatherworking</strong> - Drums + some craftable gear</li>
+                </ol>
+                <h4>Secondary Options:</h4>
+                <ul>
+                    <li><strong>Engineering</strong> - Great utility, scopes, bombs</li>
+                    <li><strong>Blacksmithing</strong> - 2 extra sockets</li>
+                </ul>
+            </div>
+
+            <!-- CASTERS -->
+            <div class="class-card">
+                <h3>🔮 Casters</h3>
+                <p><em>Mages, Warlocks, Shadow Priests, Elemental Shaman, Balance Druids</em></p>
+                <h4>Primary Recommendations:</h4>
+                <ol>
+                    <li><strong>Tailoring</strong> - Specialization sets
+                        <ul>
+                            <li>Frozen Shadoweave (Shadow damage)</li>
+                            <li>Spellfire (Fire damage)</li>
+                            <li>Very strong in T4/T5</li>
+                        </ul>
+                    </li>
+                    <li><strong>Jewelcrafting</strong> - <span class="stat-bonus">+60 Spell Power</span></li>
+                </ol>
+                <h4>Secondary Options:</h4>
+                <ul>
+                    <li><strong>Enchanting</strong> - +24 Spell Damage (rings)</li>
+                    <li><strong>Alchemy</strong> - Alchemist Stone, double flask duration</li>
+                    <li><strong>Engineering</strong> - Utility gadgets</li>
+                </ul>
+                <div class="success-box">
+                    <strong>Popular Combos:</strong>
+                    <ul>
+                        <li>Tailoring + Enchanting (classic combo)</li>
+                        <li>Jewelcrafting + Alchemy (optimal late-game)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HEALERS -->
+            <div class="class-card">
+                <h3>💚 Healers</h3>
+                <p><em>All Healing Specs</em></p>
+                <h4>Primary Recommendations:</h4>
+                <ol>
+                    <li><strong>Alchemy</strong> - <span class="stat-bonus">Double flask duration</span>
+                        <ul>
+                            <li>Saves TONS of gold over the expansion</li>
+                            <li>Best long-term investment</li>
+                        </ul>
+                    </li>
+                    <li><strong>Jewelcrafting</strong> - <span class="stat-bonus">+60 SP or +81 Stamina</span></li>
+                </ol>
+                <h4>Secondary Options:</h4>
+                <ul>
+                    <li><strong>Tailoring</strong> - Primal Mooncloth set</li>
+                    <li><strong>Enchanting</strong> - +24 Healing on rings</li>
+                    <li><strong>Leatherworking</strong> - Drums (if needed)</li>
+                </ul>
+                <div class="info-box">
+                    <strong>Why Alchemy?</strong> Double flask duration means you'll spend half as much gold on consumables throughout the entire expansion. This adds up to thousands of gold saved.
+                </div>
+            </div>
+
+            <!-- TANKS -->
+            <div class="class-card">
+                <h3>🛡️ Tanks</h3>
+                <p><em>Protection Warriors, Protection Paladins, Feral Druids</em></p>
+                <h4>Primary Recommendations:</h4>
+                <ol>
+                    <li><strong>Jewelcrafting</strong> - <span class="stat-bonus">+81 Stamina</span> (or mix)</li>
+                    <li><strong>Blacksmithing</strong> - 2 extra sockets
+                        <ul>
+                            <li>Perfect for stamina stacking</li>
+                            <li>Scales incredibly with Epic gems</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h4>Secondary Options:</h4>
+                <ul>
+                    <li><strong>Engineering</strong> - Rocket Launcher (45yd pull), utility</li>
+                    <li><strong>Leatherworking</strong> - Drums + some tank gear (Druids)</li>
+                    <li><strong>Enchanting</strong> - Ring enchants for stats</li>
+                </ul>
+                <div class="success-box">
+                    <strong>Best Tank Combo:</strong> Jewelcrafting + Blacksmithing gives you maximum survivability stats through extra stamina gems.
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFESSION STRATEGIES -->
+        <h2>📊 Profession Strategies</h2>
+
+        <h3>For Different Playstyles</h3>
+
+        <div class="profession-grid">
+            <div class="profession-card">
+                <h4>💪 Pure DPS Focus</h4>
+                <ul>
+                    <li><strong>Best:</strong> Jewelcrafting + Blacksmithing</li>
+                    <li>Scales throughout entire expansion</li>
+                    <li>Maximum stat optimization</li>
+                </ul>
+            </div>
+
+            <div class="profession-card">
+                <h4>💰 DPS + Gold Making</h4>
+                <ul>
+                    <li><strong>Best:</strong> Jewelcrafting + Alchemy</li>
+                    <li>JC gems always in demand</li>
+                    <li>Transmute spec for daily gold</li>
+                </ul>
+            </div>
+
+            <div class="profession-card">
+                <h4>🎮 Utility Focus</h4>
+                <ul>
+                    <li><strong>Best:</strong> Jewelcrafting + Engineering</li>
+                    <li>Stats + gadgets/bombs</li>
+                    <li>Great for PvP and PvE</li>
+                </ul>
+            </div>
+
+            <div class="profession-card">
+                <h4>💸 Gold Savings (Healers)</h4>
+                <ul>
+                    <li><strong>Best:</strong> Alchemy + Jewelcrafting</li>
+                    <li>Double flask duration = huge savings</li>
+                    <li>Still competitive stats</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Advanced Strategy: Profession Swapping</h3>
+        <div class="info-box">
+            <strong>Many players use this strategy:</strong>
+            <ol>
+                <li><strong>Phase 1-2:</strong> Level Tailoring or Leatherworking</li>
+                <li>Craft your specialization set (Shadoweave, Spellfire, etc.)</li>
+                <li><strong>Phase 2-3:</strong> Drop crafting profession</li>
+                <li>Pick up Jewelcrafting or Engineering</li>
+                <li>You keep the crafted gear, gain new profession bonuses</li>
+            </ol>
+            <p><em>This requires gold investment but maximizes your power at each phase.</em></p>
+        </div>
+
+        <!-- PVP CHANGES -->
+        <h2 id="pvp-changes">⚔️ Arena & PvP Changes</h2>
+
+        <h3>Arena System Overhaul</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Change</th>
+                    <th>Old System</th>
+                    <th>New System</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Starting Rating</strong></td>
+                    <td>0</td>
+                    <td><span class="stat-bonus">1500</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Rating Reset</strong></td>
+                    <td>Not available</td>
+                    <td>Can reset to 1500 once/week (costs gold, per bracket)</td>
+                </tr>
+                <tr>
+                    <td><strong>Gear Requirements</strong></td>
+                    <td>Most items had rating requirements</td>
+                    <td>Only Shoulders (2000) & Weapons (1700)</td>
+                </tr>
+                <tr>
+                    <td><strong>Gear Costs</strong></td>
+                    <td>Higher</td>
+                    <td>Reduced across the board</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Faction Reputation PvP Gear</h3>
+        <div class="success-box">
+            <ul>
+                <li>Available from <span class="stat-bonus">Season 1 start</span> (not delayed)</li>
+                <li>Set bonuses <span class="highlight">combined</span> with Honor gear</li>
+                <li>Can mix Honor and Reputation pieces for set bonuses</li>
+                <li>Makes gearing much more accessible</li>
+            </ul>
+        </div>
+
+        <h3>Dampening System</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Bracket</th>
+                    <th>Activation</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>2v2</strong></td>
+                    <td>At 20 minutes</td>
+                    <td>Starts 0%, increases 6%/min, caps at 100%</td>
+                </tr>
+                <tr>
+                    <td><strong>3v3 / 5v5</strong></td>
+                    <td>5 min after both teams drop below bracket size</td>
+                    <td>Starts 0%, increases 6%/min, caps at 100%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- QUALITY OF LIFE -->
+        <h2 id="quality-of-life">✨ Quality of Life Features</h2>
+
+        <div class="profession-grid">
+            <div class="success-box">
+                <h3>UI & Interface</h3>
+                <ul>
+                    <li><strong>Edit Mode</strong> - Customize UI without addons</li>
+                    <li><strong>Dual Spec</strong> - Available from start (originally WotLK)</li>
+                    <li><strong>Modern Guild UI</strong> - Improved guild management</li>
+                    <li><strong>LFG Tool</strong> - Easier group formation</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <h3>Progression Features</h3>
+                <ul>
+                    <li><strong>No buff/debuff limit</strong></li>
+                    <li><strong>Instant mail</strong> between same-account characters</li>
+                    <li><strong>Guild Banks</strong> from Day 1</li>
+                    <li><strong>Account-wide attunements</strong></li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <h3>Resources</h3>
+                <ul>
+                    <li><strong>Increased Terocone spawns</strong> - More herb nodes</li>
+                    <li><strong>No-GDKP policy</strong> on Anniversary realms</li>
+                    <li><strong>Guild dethroning system</strong> for leadership transfers</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <h3>Leveling Changes</h3>
+                <ul>
+                    <li><strong>Mount at level 30</strong> (down from 40)</li>
+                    <li><strong>15% less XP</strong> required 20-60</li>
+                    <li><strong>Better quest rewards</strong></li>
+                    <li><strong>35% faster leveling</strong> overall to 60</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRE-PATCH CONTENT -->
+        <h2>🚀 Pre-Patch Content (January 13, 2026)</h2>
+
+        <h3>New Races</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Race</th>
+                    <th>Faction</th>
+                    <th>Key Addition</th>
+                    <th>Racial Traits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Blood Elves</strong></td>
+                    <td>Horde</td>
+                    <td><span class="stat-bonus">Horde Paladins!</span></td>
+                    <td>Arcane Torrent, Mana Tap</td>
+                </tr>
+                <tr>
+                    <td><strong>Draenei</strong></td>
+                    <td>Alliance</td>
+                    <td><span class="stat-bonus">Alliance Shamans!</span></td>
+                    <td>Gift of the Naaru, Heroic Presence, Gemcutting (+5 JC)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>New Profession: Jewelcrafting</h3>
+        <div class="info-box">
+            <ul>
+                <li>Available in pre-patch to level to 300</li>
+                <li>Learn <strong>Prospecting</strong> at skill 20 (5 ore → gems)</li>
+                <li>Craft rings, necklaces, trinkets, and gems</li>
+                <li><strong>Draenei bonus:</strong> +5 Jewelcrafting skill (Gemcutting racial)</li>
+                <li>Perfect time to level before Outland opens</li>
+            </ul>
+        </div>
+
+        <h3>Class Changes in Pre-Patch</h3>
+        <div class="class-card">
+            <ul>
+                <li><strong>Talent trees expanded</strong> to 61 points</li>
+                <li><strong>Spell mechanics updated</strong> for TBC systems</li>
+                <li><strong>Faster leveling</strong> for many classes:
+                    <ul>
+                        <li>Shorter health/mana regeneration times</li>
+                        <li>Blizzard now affected by Haste stat</li>
+                        <li>Mage Mana Shield absorbs all damage types</li>
+                    </ul>
+                </li>
+                <li>All professions can reach 300 before Outland</li>
+            </ul>
+        </div>
+
+        <h3>Anti-Boosting Measures</h3>
+        <div class="warning-box">
+            <strong>⚠️ Dungeon Changes to Prevent Boosting:</strong>
+            <ul>
+                <li>After 30 seconds in combat, mobs gain <span class="negative">immunity</span> to slows, stuns, roots</li>
+                <li>Mobs will <span class="negative">teleport</span> to players who kite too long</li>
+                <li>Kills Mage AoE farming in Slave Pens, Stratholme, etc.</li>
+                <li>Designed to eliminate dungeon boosting services</li>
+            </ul>
+        </div>
+
+        <!-- SUMMARY -->
+        <h2>📝 Quick Reference Summary</h2>
+
+        <div class="profession-grid">
+            <div class="success-box">
+                <h3>Must-Know Changes</h3>
+                <ol>
+                    <li><strong>Bloodlust is raid-wide</strong> - One shaman buffs all 25</li>
+                    <li><strong>Drums nerfed</strong> - Only 1 LW per party needed</li>
+                    <li><strong>Attunements are account-wide</strong> - Alt-friendly</li>
+                    <li><strong>Tier 4 post-nerfed</strong> - Easier than original</li>
+                    <li><strong>Heroics pre-nerfed</strong> - Harder for challenge</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <h3>Best Overall Professions</h3>
+                <ol>
+                    <li><strong>Jewelcrafting</strong> - Best early phases</li>
+                    <li><strong>Alchemy</strong> - Best gold savings</li>
+                    <li><strong>Blacksmithing</strong> - Best late-game scaling</li>
+                    <li><strong>Engineering</strong> - Best utility</li>
+                    <li><strong>Enchanting</strong> - Solid all-around</li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <h3>Common Mistakes to Avoid</h3>
+                <ul>
+                    <li><span class="negative">❌</span> Everyone going Leatherworking (not needed!)</li>
+                    <li><span class="negative">❌</span> Taking gathering professions for raids</li>
+                    <li><span class="negative">❌</span> Ignoring Jewelcrafting in early phases</li>
+                    <li><span class="negative">❌</span> Not using dual spec feature</li>
+                    <li><span class="negative">❌</span> Forgetting about account-wide attunements</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #4fc3f7; text-align: center; color: #b0b0b0;">
+            <p><strong>The Burning Crusade Classic Anniversary Edition</strong></p>
+            <p>Pre-Patch: January 13, 2026 | Launch: February 2026</p>
+            <p style="margin-top: 20px; font-size: 0.9em;">
+                This guide compiled from official Blizzard PTR Development Notes and community testing.<br>
+                For the latest updates, check the official WoW Classic forums.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
